@@ -1,6 +1,8 @@
 console.log("ready");
 
 let position = 0, quiz, quiz_status, question, plyrChoice, choices, ansA, ansB, ansC, correct;
+let playerOne = 0;
+let playerTwo = 0;
 
 let questions = [
 	["Who was the original killer in 'Friday the 13th'?", "Jason Voorhees", "Alice", "Mrs. Voorhees", "C"],
@@ -19,6 +21,12 @@ function getId(x) {
 
 function renderQ() {
 	quiz = getId('quiz');
+	if (position >= 4) {
+		playerOne = correct;
+		quiz.innerHTML = "You got " +correct+ " right!<br> Now it's player two's turn"; 
+		correct = 0; //this part not working properly//
+	};
+
 	question = questions[position][0];
 	ansA = questions[position][1];
 	ansB = questions[position][2];
