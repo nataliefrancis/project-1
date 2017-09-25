@@ -6,8 +6,8 @@ This is a two player game with the first player answering 4 trivia questions abo
 
 ### Here are my two sketched wireframes, one for the quiz page and one for the results page:
 
-1. ![Quiz Page](images/wireframe_landingpg.jpg)
-2. ![Results Page](images/wireframe_results.jpg)
+1. ![Quiz Page](/images/wireframe_landingpg.jpg)
+2. ![Results Page](/images/wireframe_results.jpg)
 
 ### Here is a link to my Trello page:
 [Trello](https://trello.com/b/Fd4OAwNG/project-1)
