@@ -17,7 +17,7 @@ h1 {
 	font-size: 60px;
 }
 
-/*   Button on the index.html page to start game   */
+/*   Buttons on both pages   */
 .next {
 	width: 150px;
 	margin: auto;
@@ -34,11 +34,36 @@ button {
 	color: red;
 	border-radius: 20px;
 }
+/* -----------------------*/
 
-/*     This is the div that the questions will populate to       */
+/*////////////     This is the div that the questions will populate to     ////////////  */
 #quiz {
 	background-color: black;
 	opacity: 0.5;
-	padding: 40px 40px;
-	text-align: center;
+	padding: 0 30px;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-radius: 20px;
 }
+
+		/* This is how the questions themselves will appear on the page */
+h3 {
+	font-size: 45px;
+	margin-left: 10%;
+}
+
+		/* This is how the choices will appear on the page */
+.choices {
+	margin-left: 35%;
+}
+
+		/* This is how the next button will appear on the page */
+.next-button {
+	margin-top: 20px;
+	margin-left: 35%;
+}
+
+/*/////////////////// END DIV //////////////////*/
+
+
+
