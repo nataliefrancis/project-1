@@ -9,7 +9,7 @@ body {
 
 }
 
-/*Header*/
+/*     Header      */
 h1 {
 	font-family: 'Nosifer', cursive;
 	color: #EB1616;
@@ -17,7 +17,25 @@ h1 {
 	font-size: 60px;
 }
 
-/*This is the div that the questions will populate to */
+/*   Button on the index.html page to start game   */
+.next {
+	width: 150px;
+	margin: auto;
+	padding-top: 100px;
+}
+
+button {
+	background-color: #37CA41;
+	text-align: center;
+	color: white;
+	padding: 15px 15px;
+	font-size: 30px;
+	font-family: 'Nosifer', cursive;
+	color: red;
+	border-radius: 20px;
+}
+
+/*     This is the div that the questions will populate to       */
 #quiz {
 	background-color: black;
 	opacity: 0.5;
