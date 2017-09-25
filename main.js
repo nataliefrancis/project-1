@@ -23,21 +23,15 @@ function getId(x) {
 /////////////// QUESTION GENERATOR ////////////////////
 function renderQ() {
 	quiz = getId('quiz');
-	if (position >= 4) {
-		playerOne = correct;
-		quiz.innerHTML = "You got " +correct+ " right!<br> Now it's player two's turn"; 
-		correct = 0; //this part not working properly//
-	};
-
 	question = questions[position][0];
 	ansA = questions[position][1];
 	ansB = questions[position][2];
 	ansC = questions[position][3];
 	quiz.innerHTML = "<h3>" +question+ "</h3>";
-	quiz.innerHTML += "<input type='radio' name='choices' value='A'>" +ansA+ "<br>";
-	quiz.innerHTML += "<input type='radio' name='choices' value='B'>" +ansB+ "<br>";
-	quiz.innerHTML += "<input type='radio' name='choices' value='C'>" +ansC+ "<br>";
-	quiz.innerHTML += "<button onclick=checkAnswer()>Next</button>";
+	quiz.innerHTML += "<input type='radio' name='choices' class='choices' value='A'>" +ansA+ "<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' class='choices value='B'>" +ansB+ "<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' class='choices value='C'>" +ansC+ "<br>";
+	quiz.innerHTML += "<button class='next-button' onclick=checkAnswer()>Next</button>";
 };
 
 /////////////// Checks to see if the answer is correct and adds to their score ////////
@@ -50,9 +44,9 @@ function checkAnswer() {
 		if (plyrChoice == questions[position][4]) {
 			correct++;
 		}
-		position++;
-		renderQ();
 	}
+	position++;
+	renderQ();
 };
 
 window.addEventListener("load", renderQ(), false);
