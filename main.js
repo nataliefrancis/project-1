@@ -1,9 +1,10 @@
 console.log("ready");
 
 let position = 0, quiz, quiz_status, question, plyrChoice, choices, ansA, ansB, ansC, correct;
-let playerOne = 0;
-let playerTwo = 0;
+let playerOne = 0; //Player one score
+let playerTwo = 0; //Player two score
 
+///////////// QUESTIONS AND ANSWERS //////////////////
 let questions = [
 	["Who was the original killer in 'Friday the 13th'?", "Jason Voorhees", "Alice", "Mrs. Voorhees", "C"],
 	["What was Leatherface's weapon of choice?", "Chainsaw", "Knife", "Axe", "A"],
@@ -19,6 +20,7 @@ function getId(x) {
 	return document.getElementById(x);
 };
 
+/////////////// QUESTION GENERATOR ////////////////////
 function renderQ() {
 	quiz = getId('quiz');
 	if (position >= 4) {
@@ -38,6 +40,7 @@ function renderQ() {
 	quiz.innerHTML += "<button onclick=checkAnswer()>Next</button>";
 };
 
+/////////////// Checks to see if the answer is correct and adds to their score ////////
 function checkAnswer() {
 	choices = document.getElementsByName('choices');
 	for(let i = 0; i < choices.length; i++) {
