@@ -1,7 +1,7 @@
 console.log("ready");
 
 let position = 0, quiz, quiz_status, question, plyrChoice, choices, ansA, ansB, ansC;
-let correct = 0
+var correct = 0
 let playerOne = 0; //Player one score
 let playerTwo = 0; //Player two score
 let turn = 0 //This is used to notify when it is player 2's turn
@@ -35,9 +35,9 @@ function renderQ() {
 	ansB = questions[position][2];
 	ansC = questions[position][3];
 	quiz.innerHTML = "<h3>" +question+ "</h3>";
-	quiz.innerHTML += "<input type='radio' name='choices' class='choices' value='A'>" +ansA+ "<br>";
-	quiz.innerHTML += "<input type='radio' name='choices' class='choices value='B'>" +ansB+ "<br>";
-	quiz.innerHTML += "<input type='radio' name='choices' class='choices value='C'>" +ansC+ "<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' class='choice' value='A'>" +ansA+ "<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' class='choice' value='B'>" +ansB+ "<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' class='choice' value='C'>" +ansC+ "<br>";
 	quiz.innerHTML += "<button class='next-button' onclick=checkAnswer()>Next</button>";
 };
 
@@ -46,14 +46,14 @@ function checkAnswer() {
 	choices = document.getElementsByName('choices');
 	for(let i = 0; i < choices.length; i++) {
 		if (choices[i].checked) {
-			plyrChoice = choices[i].value;
-			if (plyrChoice == questions[position][4]) { //correct++ not working properly
-				correct++;
-			}
+			plyrChoice = choices[i].value; //stores the value of their choice
 		}
-	}
-	turn++
-	position= Math.floor((Math.random() * 7) + 0);
+	};
+	if (plyrChoice == questions[position][4]) { //Compares the value of their choice to the correct answer
+		correct++; //Stores a point for what they got right
+	};
+	turn++ //logs how many questions have been asked
+	position= Math.floor((Math.random() * 7) + 0); //randomizes the question number
 	renderQ();
 };
 
