@@ -1,10 +1,11 @@
 console.log("ready");
 
-let position = 0, quiz, question, plyrChoice, choices, ansA, ansB, ansC;
-let correct = 0
+let position = 0;
+let placeholder = quiz, question, plyrChoice, choices, ansA, ansB, ansC;
+let correct = 0;
 let playerOne = 0; //Player one score
 let playerTwo = 0; //Player two score
-let turn = 0 //This is used to notify when it is player 2's turn
+let turn = 0; //This is used to notify when it is player 2's turn
 
 quiz = document.getElementById('quiz'); //#quiz div
 
@@ -20,10 +21,6 @@ let questions = [
 	["What horror movie featured a gourmet cannibal?", "Silence of the Lambs", "Friday the 13th", "Texas Chainsaw Massacre", "A"],
 ];
 
-// function getId(x) {
-// 	return document.getElementById(x);
-// };
-
 /////////////// QUESTION GENERATOR ////////////////////
 function renderQ() {
 	if(turn == 5) {
@@ -31,7 +28,7 @@ function renderQ() {
 			playerOne = correct;    //Logs the score for player one
 			alert("It is player two's turn now"); //switch players
 	}
-	if(turn == 11) {
+	if(turn == 11) {              //Once each player answers 5 questions, it checks for winner
 		playerTwo = correct - playerOne;
 		checkWinner();
 		return false;
@@ -57,9 +54,10 @@ function checkAnswer() {
 	};
 	if (plyrChoice == questions[position][4]) {   //Compares the value of their choice to the correct answer
 		correct++;             //Stores a point for what they got right
+		questions[position].pop(); //Erases the question so that there are no repeats
 	};
-	turn++             //logs how many questions have been asked
-	position= Math.floor((Math.random() * 7) + 0);          //randomizes the question number
+	turn++;            //logs how many questions have been asked
+	position++;   //This changes he question #
 	renderQ();
 };
 
