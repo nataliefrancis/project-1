@@ -1,8 +1,10 @@
 console.log("ready");
 
-let position = 0, quiz, quiz_status, question, plyrChoice, choices, ansA, ansB, ansC, correct;
+let position = 0, quiz, quiz_status, question, plyrChoice, choices, ansA, ansB, ansC;
+let correct = 0
 let playerOne = 0; //Player one score
 let playerTwo = 0; //Player two score
+let turn = 0 //This is used to notify when it is player 2's turn
 
 ///////////// QUESTIONS AND ANSWERS //////////////////
 let questions = [
@@ -16,13 +18,18 @@ let questions = [
 	["What horror movie featured a gourmet cannibal?", "Silence of the Lambs", "Friday the 13th", "Texas Chainsaw Massacre", "A"],
 ];
 
-function getId(x) {
-	return document.getElementById(x);
-};
+// function getId(x) {
+// 	return document.getElementById(x);
+// };
 
 /////////////// QUESTION GENERATOR ////////////////////
 function renderQ() {
-	quiz = getId('quiz');
+	quiz = document.getElementById('quiz'); //#quiz div
+	if(turn == 5) {
+			turn++;
+			playerOne = correct
+			alert("It is player two's turn now"); //switch players
+	}
 	question = questions[position][0];
 	ansA = questions[position][1];
 	ansB = questions[position][2];
@@ -40,12 +47,13 @@ function checkAnswer() {
 	for(let i = 0; i < choices.length; i++) {
 		if (choices[i].checked) {
 			plyrChoice = choices[i].value;
-		}
-		if (plyrChoice == questions[position][4]) {
-			correct++;
+			if (plyrChoice == questions[position][4]) { //correct++ not working properly
+				correct++;
+			}
 		}
 	}
-	position++;
+	turn++
+	position= Math.floor((Math.random() * 7) + 0);
 	renderQ();
 };
 
