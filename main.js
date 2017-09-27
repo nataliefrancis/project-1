@@ -1,7 +1,8 @@
 console.log("ready");
 
-let position = Math.floor((Math.random() * 19) + 0);
-var placeholder = quiz, question, plyrChoice, choices, ansA, ansB, ansC;
+let position = Math.floor((Math.random() * count) + 0); //Used for the index of the current question
+let count = 19 //Used for the randomizing positions, it's the count of the # of questions available in questions array
+let placeholder = quiz, question, plyrChoice, choices, ansA, ansB, ansC;
 let correct = 0;
 let playerOne = 0; //Player one score
 let playerTwo = 0; //Player two score
@@ -71,7 +72,8 @@ function checkAnswer() {
 		questions.splice(position, 1); //Erases the question so that there are no repeats
 	};
 	turn++;            //logs how many questions have been asked
-	position=Math.floor((Math.random() * 19) + 0);   //This changes the question #
+	count--;
+	position=Math.floor((Math.random() * count) + 0);   //This changes the question #
 	renderQ();
 };
 
