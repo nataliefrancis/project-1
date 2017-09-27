@@ -28,13 +28,19 @@ h1 {
 }
 
 /* ////////  Buttons on both pages //////////  */
-.next {
+
+.play {		/*This is the play button at the start of the game */
 	width: 150px;
 	margin: auto;
 	padding-top: 100px;
 }
 
-button {
+.play2 {	/*Player 2's start button */
+	width: 150px;
+	margin-left: 45%;
+}
+
+button {	/*All buttons */
 	background-color: #37CA41;
 	text-align: center;
 	color: white;
@@ -73,7 +79,14 @@ h3 {
 	margin-left: 45%;
 }
 
+		/* This is for the switch players prompt and winner alert */
+h2 {
+	text-align: center;
+	color: #37CA41;
+}
+
 /*/////////////////// END DIV //////////////////*/
+
 
 /*////////	Footer with text and button  ////// */
 footer {
@@ -90,10 +103,11 @@ span {   	/* Text */
 
 #search-button {	/* IMDB button  */
 	width: 120px;
-	height: 40px;
+	height: 35px;
 	background-color: yellow;
 	font-size: 15px;
 	font-weight: bold;
+	border-radius: 15px 50px;
 }
 /*/////////// End footer //////////*/
 
