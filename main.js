@@ -87,6 +87,11 @@ function restart() {
 	turn = 0;
 	position= Math.floor((Math.random() * 7) + 0);
 	renderQ();
-}
+};
+
+///////////// Search button at the bottom of page ///////////
+function search() {
+    window.open("http://www.imdb.com/");
+};
 
 window.addEventListener("load", renderQ(), false);
