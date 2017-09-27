@@ -1,3 +1,13 @@
+
+    /*      Landing page       */
+.index-body {
+	background-image: url('images/movie_reel_bg.jpg');
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+	/*      Game page        */
 body {
 	background-image: url('images/creepy_hallway_bg.jpeg');
 	background-color: black;
@@ -60,7 +70,7 @@ h3 {
 		/* This is how the next button will appear on the page */
 .next-button {
 	margin-top: 20px;
-	margin-left: 35%;
+	margin-left: 45%;
 }
 
 /*/////////////////// END DIV //////////////////*/
