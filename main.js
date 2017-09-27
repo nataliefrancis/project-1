@@ -1,6 +1,6 @@
 console.log("ready");
 
-let position = 0;
+let position = Math.floor((Math.random() * 19) + 0);
 let placeholder = quiz, question, plyrChoice, choices, ansA, ansB, ansC;
 let correct = 0;
 let playerOne = 0; //Player one score
@@ -14,11 +14,23 @@ let questions = [
 	["Who was the original killer in 'Friday the 13th'?", "Jason Voorhees", "Alice", "Mrs. Voorhees", "C"],
 	["What was Leatherface's weapon of choice?", "Chainsaw", "Knife", "Axe", "A"],
 	["The movie 'When a Stranger Calls' is based on which urban legend?", "Someone hiding in your backseat", "The babysitter and the stranger upstairs", "The kidney thief", "B"],
-	["In the movie 'Carrie', how does Carrie kill her mother?", "Knifes her", "Burns her", "Shoots her", "A"],
+	["In the movie 'Carrie', how does Carrie kill her mother?", "Stabs her", "Burns her", "Shoots her", "A"],
 	["In 'Nightmare on Elm Street', what colors are on Freddy Krueger's sweater?", "Red and black", "Black and gold", "Red and green", "C"],
-	["What zombie movie is this quote from: 'You are like a giant cock-blocking robot, like, developed in a secret fucking government lab.'", "Shaun of the Dead", "Zombieland", "Evil Dead", "B"],
+	["What zombie movie is this quote from: 'You are like a giant cock-blocking robot, like, developed in a secret fucking government lab.'?", "Shaun of the Dead", "Zombieland", "Evil Dead", "B"],
 	["In which Stephen King movie do the characters battle a clown named Pennywise?", "Carrie", "Tommyknockers", "It", "C"],
 	["What horror movie featured a gourmet cannibal?", "Silence of the Lambs", "Friday the 13th", "Texas Chainsaw Massacre", "A"],
+	["What is the name of the motel in 'Psycho'?", "Crave Inn", "Bates Motel", "Bel Air Motel", "B"],
+	["What is the name of the hotel in 'The Shining'?", "The Overlook", "The Majestic", "The Lenox", "A"],
+	["'The Ring' was based on a 1998 horror movie from which country?", "Ireland", "Indonesia", "Japan", "C"],
+	["Kevin Williamson was inspired to write 'Scream' after watching a documentary about which real-life serial killer?", "Ted Bundy", "The Gainsville Ripper", "Charles Manson", "B"],
+	["What horror movie features a serial killer wearing a mask inspired by an Edvard Munch painting?", "Halloween", "Texas Chainsaw Massacre", "Scream", "C"],
+	["How many times do you have to say 'Candyman' in the mirror before he appears?", "2", "3", "4", "B"],
+	["What famous villian stalks children in their dreams?", "Freddy Kreuger", "Jason Vorhees", "Leatherface", "A"],
+	["Who was the psycho in the movie Halloween?", "Freddy Kreuger", "Jason Vorhees", "Michael Myers", "C"],
+	["In 'The Exorcist', what was the little girl's name?", "Sara", "Regan", "Katherine", "B"],
+	["In the film 'The Others', what were the children allergic to?", "Sunlight", "Milk", "Dust", "A"],
+	["What city did the newlyweds go to in 'Shutter'?", "Beijing", "Bangkok", "Tokyo", "C"],
+	["In the movie 'Final Destination', where were the students aboard Flight 180 headed to?", "Germany", "France", "England", "B"],
 ];
 
 /////////////// QUESTION GENERATOR ////////////////////
@@ -26,7 +38,9 @@ function renderQ() {
 	if(turn == 5) {
 			turn++;
 			playerOne = correct;    //Logs the score for player one
-			alert("It is player two's turn now"); //switch players
+			quiz.innerHTML = "<h2>Player one, you got " +playerOne+ " correct!<br>Now it's Player Two's turn...</h2>"; //switch players
+			quiz.innerHTML += "<button class='play2' onclick=checkAnswer()>Go!</button>";
+			return false;
 	}
 	if(turn == 11) {              //Once each player answers 5 questions, it checks for winner
 		playerTwo = correct - playerOne;
@@ -57,7 +71,7 @@ function checkAnswer() {
 		questions[position].pop(); //Erases the question so that there are no repeats
 	};
 	turn++;            //logs how many questions have been asked
-	position++;   //This changes he question #
+	position=Math.floor((Math.random() * 19) + 0);   //This changes the question #
 	renderQ();
 };
 
@@ -85,7 +99,7 @@ function restart() {
 	playerOne = 0;
 	playerTwo = 0;
 	turn = 0;
-	position= Math.floor((Math.random() * 7) + 0);
+	position= Math.floor((Math.random() * 19) + 0);
 	renderQ();
 };
 
