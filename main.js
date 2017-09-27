@@ -1,7 +1,7 @@
 console.log("ready");
 
 let position = Math.floor((Math.random() * 19) + 0);
-let placeholder = quiz, question, plyrChoice, choices, ansA, ansB, ansC;
+var placeholder = quiz, question, plyrChoice, choices, ansA, ansB, ansC;
 let correct = 0;
 let playerOne = 0; //Player one score
 let playerTwo = 0; //Player two score
@@ -68,7 +68,7 @@ function checkAnswer() {
 	};
 	if (plyrChoice == questions[position][4]) {   //Compares the value of their choice to the correct answer
 		correct++;             //Stores a point for what they got right
-		questions[position].pop(); //Erases the question so that there are no repeats
+		questions.splice(position, 1); //Erases the question so that there are no repeats
 	};
 	turn++;            //logs how many questions have been asked
 	position=Math.floor((Math.random() * 19) + 0);   //This changes the question #
