@@ -1,7 +1,7 @@
 console.log("ready");
 
-let position = Math.floor((Math.random() * count) + 0); //Used for the index of the current question
 let count = 19 //Used for the randomizing positions, it's the count of the # of questions available in questions array
+let position = Math.floor((Math.random() * count) + 0); //Used for the index of the current question
 let placeholder = quiz, question, plyrChoice, choices, ansA, ansB, ansC;
 let correct = 0;
 let playerOne = 0; //Player one score
