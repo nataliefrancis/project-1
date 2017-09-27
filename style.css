@@ -27,12 +27,19 @@ h1 {
 	font-size: 60px;
 }
 
+img {
+	display: inline;
+	height: 350px;
+	width: auto;
+	margin-left: 22%;
+}
+
 /* ////////  Buttons on both pages //////////  */
 
 .play {		/*This is the play button at the start of the game */
 	width: 150px;
 	margin: auto;
-	padding-top: 100px;
+	padding-top: 70px;
 }
 
 .play2 {	/*Player 2's start button */
@@ -76,6 +83,7 @@ h3 {
 		/* This is how the next button will appear on the page */
 .next-button {
 	margin-top: 20px;
+	margin-bottom: 20px;
 	margin-left: 45%;
 }
 
