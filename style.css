@@ -27,7 +27,7 @@ h1 {
 	font-size: 60px;
 }
 
-/*   Buttons on both pages   */
+/* ////////  Buttons on both pages //////////  */
 .next {
 	width: 150px;
 	margin: auto;
@@ -44,7 +44,7 @@ button {
 	color: red;
 	border-radius: 20px;
 }
-/* -----------------------*/
+/* -----------End buttons------------*/
 
 /*////////////     This is the div that the questions will populate to     ////////////  */
 #quiz {
@@ -74,6 +74,28 @@ h3 {
 }
 
 /*/////////////////// END DIV //////////////////*/
+
+/*////////	Footer with text and button  ////// */
+footer {
+	display: inline-block;
+	margin-top: 100px;
+}
+
+span {   	/* Text */
+	margin-left: 450px;
+	color: #B54403;
+	font-family: 'Caveat', cursive;
+	font-size: 30px;
+}
+
+#search-button {	/* IMDB button  */
+	width: 120px;
+	height: 40px;
+	background-color: yellow;
+	font-size: 15px;
+	font-weight: bold;
+}
+/*/////////// End footer //////////*/
 
 
 
