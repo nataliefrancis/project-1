@@ -67,12 +67,15 @@ function checkWinner() {
 	if(playerOne > playerTwo) {
 		quiz.innerHTML = "<h2>Player One wins $1,000,000!!!</h2>";
 		quiz.innerHTML += "<button class='next-button' onclick=restart()>Play again</button>";
+		document.body.background = "images/movie_reel_bg.jpg";
 	} else if(playerOne < playerTwo) {
 		quiz.innerHTML = "<h2>Player Two wins $1,000,000!!!</h2>";
 		quiz.innerHTML += "<button class='next-button' onclick=restart()>Play again</button>";
+		document.body.background = "images/movie_reel_bg.jpg";
 	} else {
 		quiz.innerHTML = "<h2>You tied!</h2>";
 		quiz.innerHTML += "<button class='next-button' onclick=restart()>Play again</button>";
+		document.body.background = "images/movie_reel_bg.jpg";
 	}
 };
 
