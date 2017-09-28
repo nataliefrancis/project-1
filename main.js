@@ -69,8 +69,8 @@ function checkAnswer() {
 	};
 	if (plyrChoice == questions[position][4]) {   //Compares the value of their choice to the correct answer
 		correct++;             //Stores a point for what they got right
-		questions.splice(position, 1); //Erases the question so that there are no repeats
 	};
+	questions.splice(position, 1); //Erases the question so that there are no repeats
 	turn++;            //logs how many questions have been asked
 	count--;
 	position=Math.floor((Math.random() * count) + 0);   //This changes the question #
