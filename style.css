@@ -81,6 +81,11 @@ h3 {
 	margin-left: 35%;
 }
 
+p {
+	text-align: center;
+	color: white;
+}
+
 		/* This is how the next button will appear on the page */
 .next-button {
 	margin-top: 20px;
@@ -92,6 +97,11 @@ h3 {
 h2 {
 	text-align: center;
 	color: #37CA41;
+}
+
+	/* Button that appears to restart the game */
+.play-again {
+	margin-left: 40%;
 }
 
 /*/////////////////// END DIV //////////////////*/
