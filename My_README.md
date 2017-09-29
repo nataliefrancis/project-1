@@ -4,7 +4,7 @@ This is a two player game with the first player answering 5 trivia questions abo
 
 ###### * *Not available in all locations.*
 
-###About my game
+### About my game
 
 This game was made using HTML, CSS, and Javascript. My goal was to make it as self-generating as possible to avoid big blocks of data for each player. Because of that my HTML is rather thin and my javascript is also rather compact. 
 
