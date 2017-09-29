@@ -37,6 +37,17 @@ img {
 
 /* ////////  Buttons on both pages //////////  */
 
+button {	/*All buttons */
+	background-color: #37CA41;
+	text-align: center;
+	color: white;
+	padding: 15px 15px;
+	font-size: 30px;
+	font-family: 'Nosifer', cursive;
+	color: red;
+	border-radius: 20px;
+}
+
 .play {		/*This is the play button at the start of the game */
 	width: 150px;
 	margin: auto;
@@ -48,16 +59,6 @@ img {
 	margin-left: 45%;
 }
 
-button {	/*All buttons */
-	background-color: #37CA41;
-	text-align: center;
-	color: white;
-	padding: 15px 15px;
-	font-size: 30px;
-	font-family: 'Nosifer', cursive;
-	color: red;
-	border-radius: 20px;
-}
 /* -----------End buttons------------*/
 
 /*////////////     This is the div that the questions will populate to     ////////////  */
