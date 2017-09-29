@@ -12,7 +12,7 @@ quiz = document.getElementById('quiz'); //#quiz div
 
 ///////////// QUESTIONS AND ANSWERS //////////////////
 let questions = [
-	["Who was the original killer in 'Friday the 13th'?", "Jason Voorhees", "Alice", "Mrs. Voorhees", "C"],
+	["Who was the original killer in 'Friday the 13th'?", "Jason Voorhees", "Alice", "Mrs. Voorhees", "C", "Friday+the+13th"],
 	["What was Leatherface's weapon of choice?", "Chainsaw", "Knife", "Axe", "A"],
 	["The movie 'When a Stranger Calls' is based on which urban legend?", "Someone hiding in your backseat", "The babysitter and the stranger upstairs", "The kidney thief", "B"],
 	["In the movie 'Carrie', how does Carrie kill her mother?", "Stabs her", "Burns her", "Shoots her", "A"],
@@ -53,15 +53,17 @@ function renderQ() {
 	ansB = questions[position][2];
 	ansC = questions[position][3];
 	quiz.innerHTML = "<h3>" +question+ "</h3>";
-	quiz.innerHTML += "<input type='radio' name='choices' class='choice' value='A'>" +ansA+ "<br>";
-	quiz.innerHTML += "<input type='radio' name='choices' class='choice' value='B'>" +ansB+ "<br>";
-	quiz.innerHTML += "<input type='radio' name='choices' class='choice' value='C'>" +ansC+ "<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' id='A' class='choice' value='A'>" +ansA+ "<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' id='B' class='choice' value='B'>" +ansB+ "<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' id='C' class='choice' value='C'>" +ansC+ "<br>";
 	quiz.innerHTML += "<button class='next-button' onclick=checkAnswer()>Next</button>";
 };
 
 /////////////// Checks to see if the answer is correct and adds to their score ////////
 function checkAnswer() {
 	choices = document.getElementsByName('choices');
+	// document.getElementById(questions[position][4]).style.color = "green";
+
 	for(let i = 0; i < choices.length; i++) {
 		if (choices[i].checked) {
 			plyrChoice = choices[i].value;             //stores the value of their choice
@@ -82,13 +84,13 @@ function checkAnswer() {
 function checkWinner() {
 	if(playerOne > playerTwo) {
 		quiz.innerHTML = "<h2>Player One wins $1,000,000!!!</h2>";
-		quiz.innerHTML += "<button class='next-button' onclick=restart()>Play again</button>";
+		quiz.innerHTML += "<button class='play-again' onclick=restart()>Play again</button>";
 	} else if(playerOne < playerTwo) {
 		quiz.innerHTML = "<h2>Player Two wins $1,000,000!!!</h2>";
-		quiz.innerHTML += "<button class='next-button' onclick=restart()>Play again</button>";
+		quiz.innerHTML += "<button class='play-again' onclick=restart()>Play again</button>";
 	} else {
 		quiz.innerHTML = "<h2>You tied!</h2>";
-		quiz.innerHTML += "<button class='next-button' onclick=restart()>Play again</button>";
+		quiz.innerHTML += "<button class='play-again' onclick=restart()>Play again</button>";
 	}
 };
 
@@ -106,5 +108,12 @@ function restart() {
 function search() {
     window.open("http://www.imdb.com/");
 };
+
+/////////// API movie posters ////////////
+// function getPoster () {
+// 	var api_key = "https://api.themoviedb.org/3/search/movie?api_key=df91431452770d20452e624a6e2c4d97&query=";
+// 	var api_search = api_key+questions[position][5];
+// 	var posterPath = 
+// };
 
 window.addEventListener("load", renderQ(), false);
