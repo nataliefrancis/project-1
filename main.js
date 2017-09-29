@@ -12,7 +12,7 @@ quiz = document.getElementById('quiz'); //#quiz div
 
 ///////////// QUESTIONS AND ANSWERS //////////////////
 let questions = [
-	["Who was the original killer in 'Friday the 13th'?", "Jason Voorhees", "Alice", "Mrs. Voorhees", "C", "Friday+the+13th"],
+	["Who was the original killer in 'Friday the 13th'?", "Jason Voorhees", "Alice", "Mrs. Voorhees", "C"],
 	["What was Leatherface's weapon of choice?", "Chainsaw", "Knife", "Axe", "A"],
 	["The movie 'When a Stranger Calls' is based on which urban legend?", "Someone hiding in your backseat", "The babysitter and the stranger upstairs", "The kidney thief", "B"],
 	["In the movie 'Carrie', how does Carrie kill her mother?", "Stabs her", "Burns her", "Shoots her", "A"],
@@ -40,7 +40,7 @@ function renderQ() {
 			turn++;
 			playerOne = correct;    //Logs the score for player one
 			quiz.innerHTML = "<h2>Player one, you got " +playerOne+ " correct!<br>Now it's Player Two's turn...</h2>"; //switch players
-			quiz.innerHTML += "<button class='play2' onclick=checkAnswer()>Go!</button>";
+			quiz.innerHTML += "<button class='play2' onclick=renderQ()>Go!</button>";
 			return false;
 	}
 	if(turn == 11) {              //Once each player answers 5 questions, it checks for winner
@@ -62,7 +62,6 @@ function renderQ() {
 /////////////// Checks to see if the answer is correct and adds to their score ////////
 function checkAnswer() {
 	choices = document.getElementsByName('choices');
-	// document.getElementById(questions[position][4]).style.color = "green";
 
 	for(let i = 0; i < choices.length; i++) {
 		if (choices[i].checked) {
@@ -108,12 +107,5 @@ function restart() {
 function search() {
     window.open("http://www.imdb.com/");
 };
-
-/////////// API movie posters ////////////
-// function getPoster () {
-// 	var api_key = "https://api.themoviedb.org/3/search/movie?api_key=df91431452770d20452e624a6e2c4d97&query=";
-// 	var api_search = api_key+questions[position][5];
-// 	var posterPath = 
-// };
 
 window.addEventListener("load", renderQ(), false);
