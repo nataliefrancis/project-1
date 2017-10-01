@@ -2,19 +2,19 @@
     /*      Landing page       */
 .index-body {
 	background-image: url('images/movie_reel_bg.jpg');
-	background-color: black;
+	background-color: #030303;
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 	/*      Game page        */
 body {
 	background-image: url('images/creepy_hallway_bg.jpeg');
-	background-color: black;
+	background-color: #030303;
 	background-repeat: no-repeat;
 	background-size: 100%;
 	font-family: 'Caveat', cursive;
 	font-size: 35px;
-	color: white;
+	color: #FFFFFF;
 
 }
 
@@ -22,9 +22,9 @@ body {
 #rules {
 	font-family: courier, cursive;
 	font-size: 25px;
-	color: black;
+	color: #030303;
 	display: none;
-	background-color: white;
+	background-color: #FFFFFF;
 	opacity: 0.8;
 	border-radius: 20px;
 }
@@ -52,11 +52,11 @@ img {
 button {	/*All buttons */
 	background-color: #37CA41;
 	text-align: center;
-	color: white;
+	color: #FFFFFF;
 	padding: 15px 15px;
 	font-size: 30px;
 	font-family: 'Nosifer', cursive;
-	color: red;
+	color: #FF0000;
 	border-radius: 20px;
 }
 
@@ -72,7 +72,7 @@ button:hover {	/*Buttons enlarge slightly when hovered */
 	font-family: 'courier', cursive;
 	font-size: 15px;
 	padding: 5px;
-	color: white;
+	color: #FFFFFF;
 	height: 30px;
 	width: 120px;
 }
@@ -92,7 +92,7 @@ button:hover {	/*Buttons enlarge slightly when hovered */
 
 /*////////////     This is the div that the questions will populate to     ////////////  */
 #quiz {
-	background-color: black;
+	background-color: #030303;
 	opacity: 0.5;
 	padding: 0 30px;
 	margin-left: 10%;
@@ -113,7 +113,7 @@ h3 {
 
 p {
 	text-align: center;
-	color: white;
+	color: #FFFFFF;
 }
 
 		/* This is how the next button will appear on the page */
@@ -163,7 +163,7 @@ span {   	/* Text */
 #search-button {	/* IMDB button  */
 	width: 120px;
 	height: 35px;
-	background-color: yellow;
+	background-color: #FFFF40;
 	font-size: 15px;
 	font-weight: bold;
 	border-radius: 15px 50px;
