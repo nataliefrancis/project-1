@@ -9,6 +9,16 @@ let playerTwo = 0; //Player two score
 let turn = 0; //This is used to notify when it is player 2's turn
 
 quiz = document.getElementById('quiz'); //#quiz div
+results = document.getElementById('results'); //#results div, score to beat
+
+function showRules(x) {
+    var x = document.getElementById('rules');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+};
 
 ///////////// QUESTIONS AND ANSWERS //////////////////
 let questions = [
@@ -41,6 +51,7 @@ function renderQ() {
 			playerOne = correct;    //Logs the score for player one
 			quiz.innerHTML = "<h2>Player one, you got " +playerOne+ " correct!<br>Now it's Player Two's turn...</h2>"; //switch players
 			quiz.innerHTML += "<button class='play2' onclick=renderQ()>Go!</button>";
+			results.innerHTML = "<p>The score to beat is " +playerOne+ "</p>";
 			return false;
 	}
 	if(turn == 11) {              //Once each player answers 5 questions, it checks for winner
@@ -84,12 +95,15 @@ function checkWinner() {
 	if(playerOne > playerTwo) {
 		quiz.innerHTML = "<h2>Player One wins $1,000,000!!!</h2>";
 		quiz.innerHTML += "<button class='play-again' onclick=restart()>Play again</button>";
+		results.innerHTML = "";
 	} else if(playerOne < playerTwo) {
 		quiz.innerHTML = "<h2>Player Two wins $1,000,000!!!</h2>";
 		quiz.innerHTML += "<button class='play-again' onclick=restart()>Play again</button>";
+		results.innerHTML = "";
 	} else {
 		quiz.innerHTML = "<h2>You tied!</h2>";
 		quiz.innerHTML += "<button class='play-again' onclick=restart()>Play again</button>";
+		results.innerHTML = "";
 	}
 };
 
