@@ -210,3 +210,24 @@ span {   	/* Text */
   }
 }
 
+@media only screen 
+   	and (min-device-width: 320px) 
+  	and (max-device-width: 480px)  {
+	.index-body {
+		background-image: none;
+	}
+
+	body {
+		background-image: none;
+	}
+
+	#quiz {
+		background-color: #94BCDB;
+		opacity: 0.5;
+	}
+
+	footer {
+		display: none;
+	}
+}
+
