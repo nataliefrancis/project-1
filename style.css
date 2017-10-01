@@ -6,7 +6,6 @@
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
-
 	/*      Game page        */
 body {
 	background-image: url('images/creepy_hallway_bg.jpeg');
@@ -19,12 +18,25 @@ body {
 
 }
 
-/*     Header      */
-h1 {
+	/*    Rules- toggle div    */
+#rules {
+	font-family: courier, cursive;
+	font-size: 25px;
+	color: black;
+	display: none;
+	background-color: white;
+	opacity: 0.8;
+	border-radius: 20px;
+}
+
+	/*     Header      */
+.gameName {
 	font-family: 'Nosifer', cursive;
 	color: #EB1616;
 	text-align: center;
 	font-size: 60px;
+	animation-name: swing;
+	animation-duration: 5s;
 }
 
 img {
@@ -46,6 +58,23 @@ button {	/*All buttons */
 	font-family: 'Nosifer', cursive;
 	color: red;
 	border-radius: 20px;
+}
+
+button:hover {	/*Buttons enlarge slightly when hovered */
+	-webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#rulesBtn {		/* Rules button on index page */
+	background-color: #37CA41;
+	text-align: center;
+	font-family: 'courier', cursive;
+	font-size: 15px;
+	padding: 5px;
+	color: white;
+	height: 30px;
+	width: 120px;
 }
 
 .play {		/*This is the play button at the start of the game */
@@ -98,14 +127,23 @@ p {
 h2 {
 	text-align: center;
 	color: #37CA41;
+	animation-name: bounceIn;
+	animation-duration: 4s;
 }
 
 	/* Button that appears to restart the game */
 .play-again {
 	margin-left: 40%;
+	animation: nudge 5s linear infinite alternate;
 }
 
 /*/////////////////// END DIV //////////////////*/
+
+/* ///////// Score div ///////// */
+#results {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 25px;
+}
 
 
 /*////////	Footer with text and button  ////// */
@@ -132,5 +170,43 @@ span {   	/* Text */
 }
 /*/////////// End footer //////////*/
 
+@keyframes swing {
+	20% { transform: rotate(15deg); } 
+   	40% { transform: rotate(-10deg); } 
+   	60% { transform: rotate(5deg); } 
+   	80% { transform: rotate(-5deg); } 
+   	100% { transform: rotate(0deg); } 
+}
 
+
+@keyframes bounceIn {
+   0% { 
+      opacity: 0; 
+      transform: scale(.3);
+   }
+   50% { 
+      opacity: 1;
+      transform: scale(1.05);
+   }
+   70% {
+      transform: scale(.9);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+@keyframes nudge {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  
+  50% {
+    transform: translate(150px, 0);
+  }
+  
+  80% {
+    transform: translate(-150px, 0);
+  }
+}
 
