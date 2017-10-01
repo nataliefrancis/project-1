@@ -7,8 +7,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
 </head>
 <body class='index-body'>
+		<!-- Rules toggle -->
+	<button id="rulesBtn" onclick="showRules('rules')">Rules</button>
+	<div id="rules">This is a two player game. Each player answers 5 randomly selected questions and the best of 5 wins. Good luck!</div>
+		<!-- ______________ -->
 
-	<h1>Horror Movie Trivia</h1> <!--Heading, same on both pages -->
+	<h1 class = "gameName">Horror Movie Trivia</h1> <!--Heading, same on both pages -->
 
 	<img class="pic" src="images/leatherface.png" alt="Drawing rendering of Leatherface holding chainsaw">
 	<img class="pic" src="images/freddy.jpg" alt="Drawing rendering of Freddy Krueger">
@@ -19,6 +23,7 @@
 		<button onclick="window.location.href='game.html'">PLAY</button>
 	</div>
 
-<script src='main.js'></script>
+
+	<script src='main.js'></script>
 </body>
 </html>
