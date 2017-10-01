@@ -1,6 +1,6 @@
 # Horror Movie Trivia
 
-This is a two player game with the first player answering 5 trivia questions about horror movies. The second player will go next and also answer 5 questions. Each player has only 30 seconds. The winner will win $1,000,000*. To start, simply click "Play" and the game will prompt each player when it is their turn. 
+This is a two player game with the first player answering 5 trivia questions about horror movies. The second player will go next and also answer 5 questions. The winner will win $1,000,000*. To start, simply click "Play" and the game will prompt each player when it is their turn. 
 
 ###### * *Not available in all locations.*
 
